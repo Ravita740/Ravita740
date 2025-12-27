@@ -14,7 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        try {
+        try { 
+            // ravita test code side on github
             $categories = Category::orderBy('id', 'desc')->get();
             if ($categories->isEmpty()) {
                 return response()->json(['message' => 'No categories found'], 404);
