@@ -28,4 +28,7 @@ Route::get('/upload-test', function () {
 
     return 'File uploaded to S3';
 });
+Route::get('/view-s3-text', function () {
+    return Storage::disk('s3')->get('test/hello.txt');
+});
 
